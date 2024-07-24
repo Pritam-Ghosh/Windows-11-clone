@@ -1,0 +1,6 @@
+Windows Registry Editor Version 5.00
+
+;UNDO REG file
+
+[HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\Windows\Shell\Bags\AllFolders\Shell]
+"Logo"=-

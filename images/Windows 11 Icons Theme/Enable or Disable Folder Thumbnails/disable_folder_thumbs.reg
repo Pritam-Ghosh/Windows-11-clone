@@ -1,0 +1,8 @@
+Windows Registry Editor Version 5.00
+
+;Disable folder thumbnails without disabling thumbnail view for files
+;Created by Ramesh Srinivasan on 10-June-2019 for Winhelponline.com
+;Note: This fix does NOT reset your saved folder view settings.
+
+[HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\Windows\Shell\Bags\AllFolders\Shell]
+"Logo"="d:\\somefile.jpg"

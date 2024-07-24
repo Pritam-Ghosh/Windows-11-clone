@@ -1,0 +1,166 @@
+/* desktop */
+.desktop {
+    height: calc(100vh - 45px);
+    background-color: rgb(61, 34, 0);
+}
+
+.icon-container {
+    display: grid;
+
+
+}
+
+/* #icon {
+    height: 50px;
+}
+
+.icon-container p {
+    color: white;
+
+} */
+
+
+
+
+
+
+
+
+
+
+/* footer */
+.taskbar {
+    height: 45px;
+    width: 100vw;
+    background-color: black;
+    position: relative;
+}
+
+.taskbar-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Align items vertically in the center */
+    height: 100%;
+}
+
+.taskbar-icons img {
+    max-height: 25px;
+    /* Set a maximum height for the icons */
+    margin: 0 10px;
+    /* Add some margin to space out the icons */
+}
+
+/* start menu */
+.startWindow {
+    display: block;
+    width: 620px;
+    height: 550px;
+    border-radius: 7px;
+    background-color: rgba(50, 50, 50, 0.5);
+    position: absolute;
+    top: 50%;
+    /* Center vertically */
+    left: 50%;
+    /* Center horizontally */
+    transform: translate(-50%, -106%);
+}
+
+.startWindow .startSearch {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 20px;
+    text-align: center;
+}
+
+#startSearch-icon {
+    position: absolute;
+    left: 6%
+}
+
+.startWindow .startSearch input {
+    height: 30px;
+    width: 95%;
+    border-radius: 15px;
+    outline: none;
+    border: none;
+    padding-left: 50px;
+    color: aliceblue;
+    background-color: rgba(50, 50, 50, 0.5);
+}
+
+.taskSearchBar {
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    background-color: rgba(255, 255, 255, 0.9);
+    display: flex;
+    align-items: center;
+    /* Center align the input vertically */
+}
+
+.taskSearchBar input {
+    border: none;
+    outline: none;
+    background: transparent;
+    /* Make the input background transparent */
+    color: rgb(0, 0, 0);
+    /* Set the text color to white */
+    width: 100%;
+    /* Make the input take the full width of the parent */
+    padding: 5px;
+    /* Add some padding inside the input */
+}
+
+
+.pinnedTitle {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+/* .allApp {
+    margin-right: 0px;
+} */
+#allAppBtn{
+    width: 5.5rem;
+    height: 1.5rem;
+    padding: 2px;
+    font-size: 14px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.2);
+    outline: none;
+    border: none;
+    border-radius: 6px;
+}
+
+.AppList{
+    height:  calc(100vh - 574px);
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    padding:  0 60px;
+    gap: 10px;
+}
+.AppList-edgeIcon{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;  
+}
+
+.recommendedTitle{
+    height: 24px;
+}
+.recommendedList{
+    height: calc(100vh - 574px - 24px);
+    display: grid;
+    grid-template-columns: 1fr 1fr
+}
+.startControl{
+
+}
