@@ -7,6 +7,7 @@
     <title>win 11</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="StartMenu.css">
 </head>
 
 <body>
@@ -15,17 +16,28 @@
         <!-- desktop -->
         <div class="desktop">
             <div class="desktop-icons">
-                <div class="icon-container">
-
-                    <!-- <img src="/Windows 11/images/edge-icon.png" id="icon" alt=""> -->
-
-                    <p>edge</p>
-
+                <div class="iconContainer">
+                    <div id="desktopIcon">
+                    <img src="/Windows 11/images/Windows 11 Icons Theme/Windows Icons/Computer.ico" alt="">
                 </div>
-
-
+                <div id="desktopIconText">
+                    <p class="AppList-iconName">This PC</p>
+                </div>
+                </div>
+                <div class="iconContainer">
+                    <img src="/Windows 11/images/Windows 11 Icons Theme/Windows Icons/Trash Empty.ico" alt="">
+                    <p class="AppList-iconName">Bin</p>
+                </div>
+                <div class="iconContainer">
+                    <img src="/Windows 11/images/edge-icon.png" alt="">
+                    <p class="AppList-iconName">Edge</p>
+                </div>
+                
+          
+     
             </div>
         </div>
+
     </main>
     <footer>
         <div class="taskbar">
@@ -126,23 +138,44 @@
 
                         </div>
                         <div class="recommendedTitle">
-                            Recommended Title
+                            <div class="recommendedText">
+                                <p>Recommended</p>
+                            </div>
+
+                            <div class="recommendedBtn"><button> More ></button></div>
+
                         </div>
 
                         <div class="recommendedList">
-                            recommended list
+
+                            <div class="recommendedListIcon">
+                                <img src="/Windows 11/images/Windows 11 Icons Theme/Windows Icons/Yellow-Folder.ico"
+                                    alt="">
+                                <p class="recommended-iconName">Outlook download</p>
+
+                            </div>
+
+                            <div class="recommendedListIcon">
+                                <img src="/Windows 11/images/Windows 11 Icons Theme/Windows Icons/Yellow-Folder.ico"
+                                    alt="">
+                                <p class="recommended-iconName">Windows 11 file</p>
+                            </div>
                         </div>
                         <div class="startControl">
                             Start Control
                         </div>
                     </div>
                 </div>
+
                 <div class="ftrTaskbar-icons">
                     <div class="taskSearchBar">
-                        <input type="text">
+                        <i class="fa-solid fa-magnifying-glass" id="taskbarSearchIcon"></i>
+                        <input type="text" placeholder="Search">
+
                     </div>
 
                 </div>
+
                 <div class="ftrTaskbar-icons">
                     <div class="fileExplorer">
                         <img src="/Windows 11/images/Explorer.ico" alt="">
@@ -152,6 +185,30 @@
                     <img src="/Windows 11/images/Settings.ico" alt="">
                 </div>
             </div>
+            <div class="controlBar">
+                <div class="showHiddenIcon">
+                    <i class="fa-solid fa-angle-up"></i>
+                </div>
+                <div class="navigationPannel">
+                    <i class="fa-solid fa-wifi"></i>
+                    <i class="fa-solid fa-volume-high"></i>
+                    <i class="fa-solid fa-battery-half"></i>
+                </div>
+                <div class="dateTime">
+                    <div class="dateTimeView">
+                        <p id="time">Time</p>
+                        <p id="date">dd/mm/yyyy</p>
+                    </div>
+                    <div class="notification">
+                        <i class="fa-regular fa-bell-slash"></i>
+                    </div>
+                </div>
+                <div class="copilot">
+                    <img src="/Windows 11/images/copilot.png" alt="">
+                </div>
+
+            </div>
+
         </div>
     </footer>
 </body>
