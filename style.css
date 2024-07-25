@@ -6,7 +6,6 @@
     display: grid;
     grid-template-columns: repeat(16,1fr);
     grid-template-rows: repeat(8,1fr);
-    
 }
 
 
@@ -35,9 +34,16 @@
     grid-template-columns: 20% 60% 20%;
     height: 45px;
     width: 100vw;
-    background-color:  rgba(0, 0, 0, 0.9);
+    background-color:  rgba(5, 5, 5, 0.9);
     position: relative;
     border-top: 1px solid rgba(255, 255, 255, 0.3);
+    
+}
+.widgets{
+    grid-column: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 .taskbar-icons {
