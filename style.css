@@ -1,3 +1,6 @@
+
+
+
 /* desktop */
 .desktop {
     height: calc(100vh - 45px);
@@ -6,15 +9,28 @@
     display: grid;
     grid-template-columns: repeat(16,1fr);
     grid-template-rows: repeat(8,1fr);
+    overflow: hidden;
 }
 
 
 .desktop-icons{
-  
+    display: grid;
+    gap: 5px;
+  text-align: center;
 
+}
+.iconContainer{
+height: 5rem;
 }
 .iconContainer img{
     height: 40px;
+}
+.iconContainer:hover{
+    border-radius: 2px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+#desktopIcon{
+    
 }
 /* #icon {
     height: 50px;
@@ -39,13 +55,21 @@
     border-top: 1px solid rgba(255, 255, 255, 0.3);
     
 }
-.widgets{
-    grid-column: 1;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-}
 
+
+/* taskbar icon */
+
+#widgets{
+    position: absolute;
+    top: 15%;
+    left: 15px;
+    height: 25px;
+}
+.start-btn{
+    margin-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
 .taskbar-icons {
     grid-column: 2;
     display: flex;
@@ -54,6 +78,11 @@
     /* Align items vertically in the center */
     height: 100%;
 }
+
+
+
+
+
 
 .taskbar-icons img {
     max-height: 25px;
@@ -74,6 +103,7 @@
     border-top: 0.1px solid rgb(60, 60, 60);
     border-bottom: 0.1px solid rgb(44, 44, 44);
     padding-left: 15px;
+    margin-right: 5px;
 }
 #taskbarSearchIcon{
     font-size: 12px;
@@ -92,6 +122,17 @@
     padding: 8px;
     /* Add some padding inside the input */
 }
+.ftrTaskbar-icons{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    transition: 0.3s;
+}
+
+.ftrIcon:hover {
+    border-radius: 3px;
+    /* border-top: 0.1px solid rgba(49, 49, 49, 0.1); */
+    background-color: rgba(255, 255, 255, 0.1);
+}
 
 
 
@@ -108,10 +149,12 @@
     gap: 8px;
 }
 .showHiddenIcon{
-    margin: 10px;
+    /* margin: 10px; */
+    padding: 10px;
 }
 .navigationPannel{
     letter-spacing: 3px;
+    padding: 10px 7px 10px 7px;
 }
 
 
@@ -122,11 +165,96 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
+    padding: 1px;
 }
 #time{
  text-align: right;   
 }
 .copilot img{
     height: 30px;
+}
+/* navigationMenu */
+.navigationMenu {
+    display: none;
+    background-color: rgba(50, 50, 50, 0.5);
+    position: absolute;
+    width: 400px;
+    right: 15px;
+    bottom: 56px;
+    height: 450px;
+    border-radius: 7px;
+    padding: 0 22px 0 22px ;
+    transform: translateY(100%);
+}
+
+.navigationMenu-iconList {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-items: center;
+    padding-top: 20px;
+    gap: 20px; /* Optional: Add some space between columns */
+}
+
+.navigationMenu-icon {
+    display: flex;
+    align-items: center;
+    width: 100px;
+    justify-content: space-around;
+    padding: 10px;
+    background-color: rgba(40, 40, 40, 0.9);
+    border-radius: 7px;
+    border: 2px solid rgba(150, 150, 150, 0.1);
+    transition: all 0.3s ease-in;
+}
+.animate-window {
+    animation: slide-up 0.3s forwards; /* Animate the window up */
+}
+
+.animate-window-reverse {
+    animation: slide-down 0.1s forwards; /* Animate the window down */
+}
+
+@keyframes slide-up {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slide-down {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(100%);
+    }
+}
+
+.navigationMenu-icon:hover{
+    background-color: rgba(255, 255, 255, 0.3);
+}
+.wifi, .bluetooth, .rightArrow, .fa-plane {
+    font-size: 24px; /* Adjust icon size as needed */
+}
+
+.rightArrow {
+    margin-top: 5px; /* Add some spacing between icon and arrow */
+}
+
+/* .wifi{
+    border-right: 1px solid white 
+} */
+/* #wifiIcon{
+    padding: 9px 25px 9px 25px
+}
+#bluetooth{
+    padding: 9px 30px 9px 30px
+}
+     */
+#airplane{
+    padding: 5px 20px 5px 20px;
 }

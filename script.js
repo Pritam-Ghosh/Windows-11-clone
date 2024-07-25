@@ -2,6 +2,8 @@ const startBtn = document.querySelector('#startBtn');
 const startMenu = document.querySelector('#startMenu');
 const date = document.querySelector('#date');
 const time = document.querySelector('#time');
+const navigationPannel = document.querySelector(".navigationPannel");
+const navigationMenu = document.querySelector('.navigationMenu')
 
 const startHandler = () => { 
     if(startMenu.style.display === 'block') {
@@ -10,6 +12,19 @@ const startHandler = () => {
         startMenu.style.display = 'block';
     }  
 };
+const navigationHandler = () =>{
+    if(navigationMenu.style.display === 'block') {
+        navigationMenu.classList.remove('animate-window');
+        navigationMenu.classList.add('animate-window-reverse'); // Add reverse animation class
+        setTimeout(() => {
+            navigationMenu.style.display = 'none';
+        }, 500); // Wait for animation to finish
+    } else {
+        navigationMenu.style.display = 'block';
+        navigationMenu.classList.remove('animate-window-reverse');
+        navigationMenu.classList.add('animate-window'); // Add animation class
+    }  
+}
 
 function dateTime() {
     const now = new Date();
@@ -44,10 +59,11 @@ function dateTime() {
     const formattedDate = dd + '/' + mm + '/' + yyyy;
     date.innerHTML = formattedDate;
 }
-
-// Event Listeners
-startBtn.addEventListener('click', startHandler);
-
 // Call the dateTime function initially and set an interval to update the time every 30 seconds
 dateTime();
 setInterval(dateTime, 60000);
+
+
+// Event Listeners
+startBtn.addEventListener('click', startHandler);
+navigationPannel.addEventListener('click',navigationHandler);

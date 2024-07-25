@@ -10,7 +10,9 @@
 body{
     font-family: "Roboto", sans-serif, Arial, Helvetica, sans-serif;
     background-color: rgb(238, 238, 238);
+    overflow-y: hidden;
 }
+
 
 ul{
     padding: 0;
