@@ -1,13 +1,17 @@
 .vlcApp{
+    display: none;
     min-height: 200px;
     position: absolute;
     left: 30%;
     min-width: 600px;
     background-color: rgb(24, 24, 24);
     color: black;
+    border-radius: 6px;
+    transition-delay: 2s;
 }
 /* control */
 .container {
+    border-radius: 6px;
     background-color:  rgba(0, 0, 0, 0.9);
     height: 30px;
     display: flex;

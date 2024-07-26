@@ -80,7 +80,6 @@ vlcApp.appendChild(vlcWindow);
 
 
 
-
 const SpeedUp = document.querySelector('#SpeedUp');
 const SpeedDown = document.querySelector('#SpeedDown');
 const VolumeUp = document.querySelector('#VolumeUp');
@@ -99,6 +98,7 @@ const backwardBtn = document.querySelector('#backwardBtn');
 const stopBtn = document.querySelector('#stopBtn');
 const seekBar = document.querySelector('#seekBar');
 const closeBtn = document.querySelector('#closeBtn');
+const mediaPlayer = document.querySelector('#mediaPlayer');
 
 const HandleInput = () =>{
     videoInput.click(); 
@@ -304,6 +304,13 @@ const stopHandler = () => {
 const closeHandler = () => {
   vlcApp.style.display = "none"
 }
+
+
+const mediaPlayerOpen = () => {
+    hideStartMenu()
+            vlcApp.style.display = 'block';
+            start
+}
 //browser call function
 videoBtn.addEventListener('click',HandleInput);
 videoInput.addEventListener('change',acceptInputHandler);
@@ -318,6 +325,7 @@ forwardBtn.addEventListener('click',forward);
 backwardBtn.addEventListener('click',backward);
 stopBtn.addEventListener('click',stopHandler);
 closeBtn.addEventListener('click',closeHandler);
+mediaPlayer.addEventListener('click',mediaPlayerOpen);
 
 //Seekbar
 seekBar.addEventListener('input', () => {
@@ -327,3 +335,4 @@ seekBar.addEventListener('input', () => {
         videoElem.currentTime = (seekValue / 100) * videoElem.duration;
     }
 });
+

@@ -5,15 +5,19 @@ const time = document.querySelector('#time');
 const navigationPannel = document.querySelector(".navigationPannel");
 const navigationMenu = document.querySelector('.navigationMenu')
 
+
 const startHandler = () => { 
+    hideNavigationHandler();
     if(startMenu.style.display === 'block') {
         
         startMenu.style.display = 'none';
+        startMenu.value =""
     } else {
         startMenu.style.display = 'block';
     }  
 };
 const navigationHandler = () =>{
+    hideStartMenu();
     if(navigationMenu.style.display === 'block') {
         navigationMenu.classList.remove('animate-window');
         navigationMenu.classList.add('animate-window-reverse'); // Add reverse animation class
@@ -59,6 +63,17 @@ function dateTime() {
 
     const formattedDate = dd + '/' + mm + '/' + yyyy;
     date.innerHTML = formattedDate;
+
+
+    
+}
+
+//hiding component
+const hideStartMenu = () => {
+    startMenu.style.display = 'none';
+};
+const hideNavigationHandler = () =>{
+    navigationMenu.style.display = 'none'
 }
 // Call the dateTime function initially and set an interval to update the time every 30 seconds
 dateTime();
