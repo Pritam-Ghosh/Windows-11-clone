@@ -1,0 +1,191 @@
+.vlcApp{
+    min-height: 200px;
+    position: absolute;
+    left: 30%;
+    min-width: 600px;
+    background-color: rgb(24, 24, 24);
+    color: black;
+}
+/* control */
+.container {
+    background-color:  rgba(0, 0, 0, 0.9);
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+  .buttons {
+    padding: 0 5px 0 5px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .button {
+    
+    background-color: black;
+    width: 30px;
+    height: 30px;
+    outline: none;
+    border: none;
+    /* border: 1px solid white; */
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+
+  .button:hover{
+    background-color: red;
+  }
+
+
+
+
+
+
+.titlebar{
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+}
+
+.title-img{
+    margin-left: 1rem;
+}
+.title{
+    font-size: 1rem;
+}
+.menu-bar{
+    display: flex;
+    gap:1rem;
+    margin-left: 1rem;
+    align-items: center;
+    
+}
+.menu{
+    position: relative;
+}
+.videoInput{
+    display: none;
+}
+.menu:hover{
+    color: black;
+    background-color: rgb(22, 134, 171);
+}
+.menu-items{
+    background-color: rgba(10, 10, 10, 0.5);
+    position: absolute;
+    top: 18px;
+    width: 9rem;
+    display: none;
+}
+
+.menu:hover .menu-items{
+    display: block;
+    cursor: default;
+    
+    
+}
+.menu-btn{
+    cursor:default;
+} 
+li{
+    padding: 0.25rem;
+}
+
+li:hover{
+    background-color: rgb(59, 59, 59);
+}
+
+
+/*---------- main ----------*/
+
+#main{
+    height: calc(50vh - 8rem);
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+.video{
+    height: 100%;
+}
+.toast{
+    display: none;
+    background-color: black;
+    color: white;
+    position: fixed;
+    top: 5.5rem;
+    right: 1.5rem;
+}
+/*---------- Footer ----------*/
+footer{
+    
+    height: 3rem;
+    /* background-color: grey; */
+}
+
+.timeControler{
+    display: flex;
+    /* letter-spacing: 10px; */
+justify-content: space-between;
+    margin: 12px 12px 0px 12px;
+
+}
+
+.footer-menu-btn{
+position: absolute;
+top: 89.5%;
+    border-radius: 8px ;
+    display: flex;
+    gap: 10px;
+    margin: 12px;
+}
+.time-slider{
+    
+    width: 88%;
+}
+.seek-bar{
+    width:100%;
+}
+#play{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: rgb(0, 0, 0);
+    border: 1px solid rgb(126, 124, 124);
+    height: 20px;
+    width: 20px;
+    text-align: center;
+}
+#pause{
+text-align: center;
+    display: none;
+    margin: auto;
+    background-color: rgb(0, 0, 0);
+    border: 1px solid rgb(126, 124, 124);
+    border-radius: 2px;
+    height: 20px;
+    width: 20px;
+    
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: rgb(0, 0, 0);
+    border: 1px solid rgb(126, 124, 124);
+    height: 20px;
+    width: 20px;
+}
+
+.btn:hover {
+    border: 1px solid rgb(7, 93, 133);
+    background-color: rgb(221, 244, 250);
+}

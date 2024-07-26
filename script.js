@@ -7,6 +7,7 @@ const navigationMenu = document.querySelector('.navigationMenu')
 
 const startHandler = () => { 
     if(startMenu.style.display === 'block') {
+        
         startMenu.style.display = 'none';
     } else {
         startMenu.style.display = 'block';
@@ -18,7 +19,7 @@ const navigationHandler = () =>{
         navigationMenu.classList.add('animate-window-reverse'); // Add reverse animation class
         setTimeout(() => {
             navigationMenu.style.display = 'none';
-        }, 500); // Wait for animation to finish
+        }, 50); // Wait for animation to finish
     } else {
         navigationMenu.style.display = 'block';
         navigationMenu.classList.remove('animate-window-reverse');
