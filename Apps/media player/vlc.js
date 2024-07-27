@@ -6,7 +6,10 @@ vlcWindow.innerHTML = `
 <div class="container">
   <div class="title" >MediaPlayer</div>
   <div class="buttons">
-    <button class="button">-</button>
+    <button class="button" id="minimizeBtn">-</button>
+    <button class="button" id="maximizeBtn">
+    <i class="fa-solid fa-window-maximize"></i>
+    </button>
     <button class="button" id="closeBtn">X</button>
   </div>
 </div>
@@ -99,6 +102,8 @@ const stopBtn = document.querySelector('#stopBtn');
 const seekBar = document.querySelector('#seekBar');
 const closeBtn = document.querySelector('#closeBtn');
 const mediaPlayer = document.querySelector('#mediaPlayer');
+const maximizeBtn = document.querySelector('#maximizeBtn');
+
 
 const HandleInput = () =>{
     videoInput.click(); 
@@ -308,8 +313,24 @@ const closeHandler = () => {
 
 const mediaPlayerOpen = () => {
     hideStartMenu()
+    vlcApp.style.opacity = 0;
+        vlcApp.style.transform = 'scale(0)';
             vlcApp.style.display = 'block';
-            start
+            setTimeout(() => {
+                vlcApp.style.opacity = 1; // Start fading in
+                vlcApp.style.transform = 'scale(1)'; // Start zooming in
+            }, 10);
+           
+}
+
+
+
+const  maximizeBtnHandler = () => {
+    vlcApp.style.top = '0px';
+    vlcApp.style.left = '0px';
+    vlcApp.style.height = '100%';
+    vlcApp.style.width= '100%';
+    videoPlayer.style.height = '500px'
 }
 //browser call function
 videoBtn.addEventListener('click',HandleInput);
@@ -326,6 +347,7 @@ backwardBtn.addEventListener('click',backward);
 stopBtn.addEventListener('click',stopHandler);
 closeBtn.addEventListener('click',closeHandler);
 mediaPlayer.addEventListener('click',mediaPlayerOpen);
+maximizeBtn.addEventListener('click',maximizeBtnHandler);
 
 //Seekbar
 seekBar.addEventListener('input', () => {

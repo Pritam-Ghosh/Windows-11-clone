@@ -1,14 +1,18 @@
-.vlcApp{
+.vlcApp {
     display: none;
     min-height: 200px;
-    position: absolute;
-    left: 30%;
     min-width: 600px;
+    position: absolute;
+    top: 15%;
+    left: 30%;
     background-color: rgb(24, 24, 24);
     color: black;
     border-radius: 6px;
-    transition-delay: 2s;
+    opacity: 0;
+    transform: scale(0); /* Start scaled down */
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
+
 /* control */
 .container {
     border-radius: 6px;
@@ -82,7 +86,7 @@
 .menu-items{
     background-color: rgba(10, 10, 10, 0.5);
     position: absolute;
-    top: 18px;
+    top: 14.5px;
     width: 9rem;
     display: none;
 }

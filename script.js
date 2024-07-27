@@ -4,6 +4,8 @@ const date = document.querySelector('#date');
 const time = document.querySelector('#time');
 const navigationPannel = document.querySelector(".navigationPannel");
 const navigationMenu = document.querySelector('.navigationMenu')
+const desktop = document.querySelector('.desktop');
+
 
 
 const startHandler = () => { 
@@ -63,10 +65,10 @@ function dateTime() {
 
     const formattedDate = dd + '/' + mm + '/' + yyyy;
     date.innerHTML = formattedDate;
-
-
-    
 }
+
+
+
 
 //hiding component
 const hideStartMenu = () => {
@@ -83,3 +85,4 @@ setInterval(dateTime, 60000);
 // Event Listeners
 startBtn.addEventListener('click', startHandler);
 navigationPannel.addEventListener('click',navigationHandler);
+desktop.addEventListener('click',hideStartMenu)

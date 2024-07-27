@@ -3,6 +3,7 @@
 
 /* desktop */
 .desktop {
+  background-image: url(images/1dark.jpg);
     height: calc(100vh - 45px);
     background-color: rgb(61, 34, 0);
      padding: 10px;
@@ -10,6 +11,11 @@
     grid-template-columns: repeat(16,1fr);
     grid-template-rows: repeat(8,1fr);
     overflow: hidden;
+    background-size: 1400px 850px; /* Fixed width and height */
+    
+}
+.desktop > img{
+    
 }
 
 
