@@ -13,13 +13,17 @@
     display: block;
   
 }
-#video{
-    
+#canvas{
+    display: none;
+}
+
+video{
+    height: inherit;
 }
 .cameraMain{
     display: block;
-height: calc(50vh - 30px);
-background-color: antiquewhite;
+height: calc(50vh - 10px);
+background-color: black
 }
 
 .photoView{

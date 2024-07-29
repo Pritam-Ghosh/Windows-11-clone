@@ -83,10 +83,6 @@ const hideNavigationHandler = () =>{
 }
 
 
-const OpenCameraHandler = () => {
-    cameraApp.style.display = 'block'
-}
-
 
 
 
@@ -114,5 +110,5 @@ setInterval(dateTime, 60000);
 startBtn.addEventListener('click', startHandler);
 navigationPannel.addEventListener('click',navigationHandler);
 desktop.addEventListener('click',hideStartMenu);
-OpenCamera.addEventListener('click',OpenCameraHandler);
+
 notepadOpenIcon.addEventListener('click',notepadOpenIconHandler);

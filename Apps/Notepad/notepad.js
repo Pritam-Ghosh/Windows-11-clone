@@ -4,7 +4,7 @@ notepad.innerHTML = `<div class="container">
         <div class="title">Notepad</div>
         <div class="buttons">
             <button class="button" id="NotepadminimizeBtn">-</button>
-            <button class="button" id="maximizeBtn">
+            <button class="button" id="NotepadMaximizeBtn">
                 <i class="fa-solid fa-window-maximize"></i>
             </button>
             <button class="button" id="NotepadcloseBtn">X</button>
@@ -30,6 +30,7 @@ notepadApp.appendChild(notepad);
 const noteOpen = document.querySelector('.noteOpen');
 const saveNote = document.querySelector('#saveNote');
 const NotepadcloseBtn = document.querySelector('#NotepadcloseBtn');
+const NotepadMaximizeBtn = document.querySelector('#NotepadMaximizeBtn')
 
 const saveNoteHandler = () => {
     const textArea = document.querySelector('#textArea').value;
@@ -64,7 +65,66 @@ const noteOpenHandler = () => {
 const NotepadcloseBtnHandler = () => {
 notepadApp.style.display = 'none'
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Assuming notepadApp and textArea are already defined
+let isNotepadMaximized = false; // Track if the Notepad is maximized
+
+const NotepadMaximizeBtnHandler = () => {
+    if (isNotepadMaximized) {
+        // Restore to default size
+        notepadApp.style.top = '15%'; // Set to default position
+        notepadApp.style.left = '30%'; // Set to default position
+        notepadApp.style.height = '320px'; // Set to default height
+        notepadApp.style.width = '600px'; // Set to default width
+        textArea.style.height = '14rem'; // Set to default textarea height
+    } else {
+        notepadApp.style.top = '0px';
+        notepadApp.style.left = '0px';
+        notepadApp.style.height = '100%';
+        notepadApp.style.width= '100%';
+        textArea.style.height = '550px'
+    }
+    isNotepadMaximized = !isNotepadMaximized; // Toggle the flag
+};
+
+// Event Listeners
+NotepadMaximizeBtn.addEventListener('click', NotepadMaximizeBtnHandler);
+
+// Other existing event listeners and functions...
+noteOpen.addEventListener('click', noteOpenHandler);
+NotepadcloseBtn.addEventListener('click', NotepadcloseBtnHandler);
+NotepadminimizeBtn.addEventListener('click', NotepadcloseBtnHandler);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 noteOpen.addEventListener('click', noteOpenHandler);
 
 NotepadcloseBtn.addEventListener('click',NotepadcloseBtnHandler);
 NotepadminimizeBtn.addEventListener('click',NotepadcloseBtnHandler)
+NotepadMaximizeBtn.addEventListener('click',NotepadMaximizeBtnHandler);
