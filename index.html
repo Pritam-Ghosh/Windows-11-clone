@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="StartMenu.css">
     <link rel="stylesheet" href="Apps/media player/vlc.css">
+    <link rel="stylesheet" href="Apps/Camera/camera.css">
+    <link rel="stylesheet" href="Apps/Notepad/notepad.css">
 </head>
 
 <body>
@@ -81,8 +83,8 @@
                         <p class="AppList-iconName">White board</p>
                     </div>
                     <div class="AppList-edgeIcon">
-                        <img src="images/ms-skype.ico" alt="">
-                        <p class="AppList-iconName">Skype</p>
+                        <img src="images/notepad.png" alt="" id="notepadOpenIcon">
+                        <p class="AppList-iconName">Notepad</p>
                     </div>
                     <div class="AppList-edgeIcon">
                         <img src="images/ms-office.ico" alt="">
@@ -124,7 +126,7 @@
                         <img src="images/calendar-icon.png" alt="">
                         <p class="AppList-iconName">Calender</p>
                     </div>
-                    <div class="AppList-edgeIcon">
+                    <div class="AppList-edgeIcon" id="OpenCamera">
                         <img src="images/Camera.ico" alt="">
                         <p class="AppList-iconName">Camera</p>
                     </div>
@@ -193,6 +195,17 @@
 
 </div>
 
+
+<!-- Camera -->
+
+<div class="cameraApp" id="cameraApp">
+
+</div>
+
+<!-- notepad -->
+ <div class="notepadApp">
+
+ </div>
 
         </div>
 
@@ -267,6 +280,8 @@
 </body>
 <script src="script.js"></script>
 <script src="Apps/media player/vlc.js"></script>
+<script src="Apps/Camera/camera.js"></script>
+<script src="Apps/Notepad/notepad.js"></script>
 <script src="https://kit.fontawesome.com/ac015ecc5b.js" crossorigin="anonymous"></script>
 
 </html>

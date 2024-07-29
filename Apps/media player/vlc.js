@@ -306,7 +306,7 @@ const stopHandler = () => {
     }  
 }
 
-const closeHandler = () => {
+let closeHandler = () => {
   vlcApp.style.display = "none"
 }
 

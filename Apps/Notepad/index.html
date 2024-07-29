@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .notepad{
+        width: 99vw;
+        height: 90vh;
+        background-color: rgb(186, 186, 186);
+    }
+    .notepadNav{
+        display: flex;
+        align-items: center;
+        margin: 10px;
+        gap: 10px;
+    }
+    textarea {
+    width: 100%;
+    height: calc(100% - 50px);
+    border: none;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 16px;
+    resize: none;
+    outline: none;
+}
+#saveNote{
+    outline: none;
+    background: none;
+    border: none;
+ font-size: 16px;
+}
+#myfile{
+    display: none;
+}
+</style>
+<body>
+    <div class="notepad">
+        <div class="notepadNav">
+            <div class="notepadMenu">
+                <div class="noteOpen">Open</div>
+                <input type="file" id="myfile" name="myfile">
+            </div>
+            <div class="notepadMenu">
+                
+                <button id="saveNote">Save</button>
+            </div>
+        </div>
+        <textarea name="notepad" id="textArea"></textarea>
+    </div>
+</body>
+<script>
+    const noteOpen = document.querySelector('.noteOpen');
+    const saveNote = document.querySelector('#saveNote');
+
+    const saveNoteHandler = () => {
+        const textArea = document.querySelector('#textArea').value;
+        const blob = new Blob([textArea], { type: 'text/plain' });
+        const anchor = document.createElement('a');
+        anchor.href = URL.createObjectURL(blob);
+        anchor.download = 'note.txt';
+        anchor.click();
+        URL.revokeObjectURL(anchor.href);
+    };
+
+    saveNote.addEventListener('click', saveNoteHandler);
+
+    const noteOpenHandler = () => {
+        const myfile = document.querySelector('#myfile');
+        myfile.type = 'file';
+        myfile.accept = 'text/plain';
+        
+        myfile.click();
+
+        myfile.onchange = function(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    document.querySelector('#textArea').value = e.target.result;
+                };
+                reader.readAsText(file);
+            }
+        };
+    };
+
+    noteOpen.addEventListener('click', noteOpenHandler);
+</script>
+</html>

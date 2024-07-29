@@ -1,0 +1,55 @@
+.cameraApp{
+    display: none;
+    min-height: 200px;
+    min-width: 600px;
+    position: absolute;
+    top: 15%;
+    left: 30%;
+    background-color: rgb(24, 24, 24);
+    color: black;
+    border-radius: 6px;
+}
+.cameraWindow{
+    display: block;
+  
+}
+#video{
+    
+}
+.cameraMain{
+    display: block;
+height: calc(50vh - 30px);
+background-color: antiquewhite;
+}
+
+.photoView{
+    display: none;
+    background-color: red;
+    height: calc(50vh - 30px);
+}
+.cameraBtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+#save{
+    position: absolute;
+    right: 20px;
+    font-size: 30px;
+}
+.cameraFotter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 4rem;
+}
+
+
+.cameraBtn button{
+    border: none;
+    outline: none;
+    background-color: rgb(24, 24, 24);
+    font-size: 45px;
+    margin: 10px;
+}

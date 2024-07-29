@@ -5,6 +5,10 @@ const time = document.querySelector('#time');
 const navigationPannel = document.querySelector(".navigationPannel");
 const navigationMenu = document.querySelector('.navigationMenu')
 const desktop = document.querySelector('.desktop');
+const cameraAppOpeningIcon = document.querySelector('#cameraApp');
+const OpenCamera = document.querySelector('#OpenCamera');
+const notepadOpenIcon= document.querySelector('#notepadOpenIcon');
+// const cameraWindowOpening = document.querySelector('.cameraWindow');
 
 
 
@@ -77,6 +81,30 @@ const hideStartMenu = () => {
 const hideNavigationHandler = () =>{
     navigationMenu.style.display = 'none'
 }
+
+
+const OpenCameraHandler = () => {
+    cameraApp.style.display = 'block'
+}
+
+
+
+
+const notepadOpenIconHandler = () => {
+
+
+
+
+    hideStartMenu()
+    notepadApp.style.opacity = 0;
+    notepadApp.style.transform = 'scale(0)';
+    notepadApp.style.display = 'block';
+            setTimeout(() => {
+                notepadApp.style.opacity = 1; // Start fading in
+                notepadApp.style.transform = 'scale(1)'; // Start zooming in
+            }, 10);
+}
+
 // Call the dateTime function initially and set an interval to update the time every 30 seconds
 dateTime();
 setInterval(dateTime, 60000);
@@ -85,4 +113,6 @@ setInterval(dateTime, 60000);
 // Event Listeners
 startBtn.addEventListener('click', startHandler);
 navigationPannel.addEventListener('click',navigationHandler);
-desktop.addEventListener('click',hideStartMenu)
+desktop.addEventListener('click',hideStartMenu);
+OpenCamera.addEventListener('click',OpenCameraHandler);
+notepadOpenIcon.addEventListener('click',notepadOpenIconHandler);

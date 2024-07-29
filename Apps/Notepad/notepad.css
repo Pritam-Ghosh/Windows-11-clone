@@ -1,0 +1,41 @@
+.notepadApp{
+    display: none;
+    min-height: 320px;
+    min-width: 600px;
+    position: absolute;
+    top: 15%;
+    left: 30%;
+    background-color: rgb(24, 24, 24);
+    color: black;
+    border-radius: 6px;
+    opacity: 0;
+    transform: scale(0); 
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+
+}
+.notepadNav{
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    gap: 10px;
+}
+textarea {
+    color: black;
+width: 100%;
+height: 14rem;
+border: none;
+padding: 10px;
+box-sizing: border-box;
+font-size: 16px;
+resize: none;
+outline: none;
+}
+#saveNote{
+outline: none;
+background: none;
+border: none;
+font-size: 16px;
+}
+#myfile{
+display: none;
+}
