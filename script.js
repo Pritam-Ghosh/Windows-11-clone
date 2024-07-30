@@ -8,11 +8,15 @@ const desktop = document.querySelector('.desktop');
 const cameraAppOpeningIcon = document.querySelector('#cameraApp');
 const OpenCamera = document.querySelector('#OpenCamera');
 const notepadOpenIcon= document.querySelector('#notepadOpenIcon');
+const showHiddenIcon = document.querySelector('.showHiddenIcon');
+const widgets = document.querySelector('#widgets');
+
 // const cameraWindowOpening = document.querySelector('.cameraWindow');
 
 
 
 const startHandler = () => { 
+    hideWidgetsHandler();
     hideNavigationHandler();
     if(startMenu.style.display === 'block') {
         
@@ -23,6 +27,7 @@ const startHandler = () => {
     }  
 };
 const navigationHandler = () =>{
+    hideWidgetsHandler();
     hideStartMenu();
     if(navigationMenu.style.display === 'block') {
         navigationMenu.classList.remove('animate-window');
@@ -82,10 +87,9 @@ const hideNavigationHandler = () =>{
     navigationMenu.style.display = 'none'
 }
 
-
-
-
-
+const hideWidgetsHandler = () => {
+    widgetsWindow.style.display = 'none';
+}
 const notepadOpenIconHandler = () => {
 
 
@@ -106,9 +110,54 @@ dateTime();
 setInterval(dateTime, 60000);
 
 
+const showHiddenIconHandler = () => {
+    if (showHiddenIconUp.style.display === 'block') {
+        showHiddenIconUp.style.display = 'none';
+    } else {
+        showHiddenIconUp.style.display = 'block';
+    }
+}
+
+
+//widgets
+const widgetsBtn = document.querySelector('.widgetsBtn');
+const widgetsWindow = document.createElement('div');
+widgetsWindow.classList.add('widgetsWindow');
+widgetsWindow.innerHTML= ``
+widgetsBtn.appendChild(widgetsWindow);
+
+const controlBar = document.querySelector('.controlBar');
+const showHiddenIconUp = document.createElement('div')
+showHiddenIconUp.classList.add('showHiddenIconUp')
+showHiddenIconUp.innerHTML = ``;
+controlBar.appendChild(showHiddenIconUp)
+
+
+const widgetsHandler = () => {
+    hideNavigationHandler();
+    hideStartMenu()
+    if (widgetsWindow.style.display === 'block') {
+        widgetsWindow.classList.remove('animate-widgetsWindow');
+        widgetsWindow.classList.add('animate-widgetsWindow-reverse'); // Add reverse animation class
+        setTimeout(() => {
+            widgetsWindow.style.display = 'none';
+        }, 100); // Delay should match the animation duration
+    } else {
+        widgetsWindow.style.display = 'block';
+        widgetsWindow.classList.remove('animate-widgetsWindow-reverse');
+        widgetsWindow.classList.add('animate-widgetsWindow');
+    }
+}
+
+// Attach the event listener
+widgetsBtn.addEventListener('click', widgetsHandler);
+
+
 // Event Listeners
 startBtn.addEventListener('click', startHandler);
 navigationPannel.addEventListener('click',navigationHandler);
 desktop.addEventListener('click',hideStartMenu);
 
 notepadOpenIcon.addEventListener('click',notepadOpenIconHandler);
+showHiddenIcon.addEventListener('click',showHiddenIconHandler);
+widgets.addEventListener('click',widgetsHandler);
