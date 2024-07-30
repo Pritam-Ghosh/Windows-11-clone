@@ -1,17 +1,41 @@
 /* start menu */
 .startWindow {
     display: none;
-    width: 620px;
-    height: 550px;
-    border-radius: 7px;
     background-color: rgba(50, 50, 50, 0.5);
     position: absolute;
-    top: 96.5%;
-    /* Center vertically */
-    left: 50%;
-    /* Center horizontally */
-    transform: translate(-50%, -106%);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    width: 620px;
+    right: 444px;
+    bottom: 56px;
+    height: 550px;
+    border-radius: 7px;
+    padding: 0 22px 0 22px ;
+    transform: translateY(100%);
+}
+
+.animate-window {
+    animation: slide-up 0.3s forwards; /* Animate the window up */
+}
+
+.animate-window-reverse {
+    animation: slide-down 0.1s forwards; /* Animate the window down */
+}
+
+@keyframes slide-up {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slide-down {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(100%);
+    }
 }
 
 .startWindow .startSearch {
@@ -169,6 +193,7 @@
 
     position: absolute;
     top: 88%;
+    left: 0%;
     width: 100%;
     background-color: black;
     height: 65px;
