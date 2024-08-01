@@ -13,6 +13,7 @@ const widgets = document.querySelector('#widgets');
 const soundProfile = document.getElementById('soundProfile');
 const soundIcon = document.getElementById('soundIcon');
 
+
 // const cameraWindowOpening = document.querySelector('.cameraWindow');
 
 

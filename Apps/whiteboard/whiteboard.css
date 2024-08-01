@@ -1,0 +1,41 @@
+.whiteboradApp {
+    display: none;
+    height: 500px;
+    width: 800px;
+    position: absolute;
+    
+}
+.whiteborad {
+    height: 500px;
+    width: 800px;
+}
+.whiteBoradCanvas {
+    background-color: white;
+    height: 450px;
+    width: 100%;
+    cursor: crosshair;
+}
+.whiteBoradButton {
+    gap: 20px;
+    border-radius: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 25px;
+    background-color: rgb(178, 202, 237);
+    border: 2px solid rgba(25, 25, 25, 0.2);
+    
+}
+#clearBtn{
+    color: white;
+    background-color: rgb(156, 0, 0);
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    width: 60px;
+}
+
+#clearBtn:hover{
+    background-color: rgb(113, 4, 4);
+}
