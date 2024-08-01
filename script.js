@@ -169,6 +169,10 @@ soundProfile.addEventListener('click', () => {
 });
 
 
+// Stop click event propagation for the widgets window
+widgetsWindow.addEventListener('click', (e) => {
+    e.stopPropagation();
+});
 
 
 

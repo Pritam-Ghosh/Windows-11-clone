@@ -12,18 +12,19 @@
     <link rel="stylesheet" href="Apps/whiteboard/whiteboard.css">
     <link rel="stylesheet" href="Apps/media player/vlc.css">
     <link rel="stylesheet" href="Apps/Camera/camera.css">
+    <link rel="stylesheet" href="Apps/WeatherApp/weather.css">
     <link rel="stylesheet" href="Apps/Notepad/notepad.css">
 </head>
 
 <body>
-            <!-- Windows lockscreen -->
-            <div class="lockscreen">
+    <!-- Windows lockscreen -->
+    <div class="lockscreen">
 
-            </div>
-    <header>  
-</header>
+    </div>
+    <header>
+    </header>
     <main>
-      
+
 
 
         <!-- desktop -->
@@ -163,7 +164,14 @@
                     </div>
                 </div>
                 <div class="startControl">
-                    Start Control
+                    <div class="profilePhoto">
+                        <img src="images/profile.jpeg" alt="">
+                        <p id="profileName">Pritam</p>
+                    </div>
+                    
+                    <div class="onoff">
+                        <i class="fa-solid fa-power-off"></i>
+                    </div>
                 </div>
 
             </div>
@@ -198,42 +206,44 @@
 
 
             <!-- widgets -->
-            <div class="widgetsBtn"> </div>
+            <div class="widgetsBtn">
 
-            
-
-<!-- VLC -->
-
-<div class="vlcApp">
-
-</div>
+            </div>
 
 
-<!-- Camera -->
 
-<div class="cameraApp" id="cameraApp">
+            <!-- VLC -->
 
-</div>
+            <div class="vlcApp">
 
-<!-- notepad -->
- <div class="notepadApp">
+            </div>
 
- </div>
-<!-- whiteborad -->
 
-<div class="whiteboradApp">
+            <!-- Camera -->
 
-</div>
+            <div class="cameraApp" id="cameraApp">
+
+            </div>
+
+            <!-- notepad -->
+            <div class="notepadApp">
+
+            </div>
+            <!-- whiteborad -->
+
+            <div class="whiteboradApp">
+
+            </div>
 
         </div>
 
     </main>
     <footer>
         <div class="taskbar">
-     
-                <img id="widgets" class="ftrIcon" src="images/Widgets.png" alt="">
-           
-         
+
+            <img id="widgets" class="ftrIcon" src="images/Widgets.png" alt="">
+
+
             <div class="taskbar-icons">
 
                 <div class="ftrTaskbaricons">
@@ -289,7 +299,7 @@
                     <div class="notification" id="soundProfile">
                         <i class="fa-regular fa-bell-slash" id="soundIcon"></i>
                     </div>
-                    
+
                 </div>
                 <div class="copilot ftrIcon">
                     <img src="images/copilot.png" alt="">
@@ -306,6 +316,7 @@
 <script src="Apps/media player/vlc.js"></script>
 <script src="Apps/Camera/camera.js"></script>
 <script src="Apps/Notepad/notepad.js"></script>
+<script src="Apps/WeatherApp/weather.js"></script>
 <script src="https://kit.fontawesome.com/ac015ecc5b.js" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/webcam-easy@1.1.1/dist/webcam-easy.min.js"></script>
 

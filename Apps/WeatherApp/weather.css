@@ -1,0 +1,47 @@
+.input-container{
+    border-radius: 7px 7px 0 0;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: darkslategrey;
+    gap: 10px;
+}
+
+.weather-container{
+    border-radius: 0 0 7px 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    gap:2rem;
+    line-height: 2;
+    background-color: darkseagreen;
+}
+
+.search{
+    width: 50%;
+}
+#searchInput{
+    outline: none;
+    border: none;
+    border-radius: 30px;
+    width: 100%;
+    padding: 8px;
+    color: black;
+}
+.searchBtn{
+    width: 20%;
+}
+#searchBtn{
+    width: 100%;
+    outline: none;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 8px;
+    border-radius: 30px;
+    background-color: rgb(119, 119, 253);
+}
+#searchBtn:hover{
+    background-color: rgb(23, 13, 218);
+}

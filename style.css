@@ -67,12 +67,12 @@ height: 5rem;
 }
 .widgetsWindow {
     display: none;
-    background-color: rgba(50, 50, 50, 0.5);
+    background-color: rgba(50, 50, 50, 0.9);
     position: absolute;
     width: 600px;
     left: 15px;
     bottom: 56px;
-    height: 730px;
+    height: 600px;
     border-radius: 7px;
     padding: 0 22px;
     transform: translateY(100%);
@@ -235,7 +235,7 @@ border-radius:6px;
 /* navigationMenu */
 .navigationMenu {
     display: none;
-    background-color: rgba(50, 50, 50, 0.5);
+    background-color: rgba(50, 50, 50, 0.9);
     position: absolute;
     width: 400px;
     right: 15px;
