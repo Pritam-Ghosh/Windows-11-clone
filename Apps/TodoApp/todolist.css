@@ -1,0 +1,129 @@
+.todoApp {
+    display: none;
+    min-height: 400px;
+    min-width: 600px;
+    position: absolute;
+    top: 15%;
+    left: 30%;
+    background-color: rgb(24, 24, 24);
+    color: black;
+    border-radius: 6px;
+
+}
+
+.containerTodo {
+    min-height: 400px;
+    min-width: 600px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 400px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.todo-app {
+    text-align: center;
+}
+
+.todo {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.todo input {
+    color: black;
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-right: 10px;
+    outline: none;
+}
+
+.todo button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #0078D7;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.todo button:hover {
+    background-color: #0056a3;
+}
+
+.todo-list h2 {
+    text-align: left;
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #555;
+}
+
+.list {
+    list-style: none;
+    padding: 0;
+}
+
+.list div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s;
+    max-width: 100%;
+    word-break: break-word;
+    overflow: hidden;
+}
+
+.list div:hover {
+    background-color: #f9f9f9;
+}
+
+.list li {
+    font-size: 16px;
+    color: #333;
+    flex: 1;
+    margin-right: 10px;
+}
+
+.list button {
+    padding: 5px 10px;
+    font-size: 14px;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.list .edit-btn {
+    background-color: #f39c12;
+    margin-right: 5px; /* Space between Edit and Delete buttons */
+}
+
+.list .edit-btn:hover {
+    background-color: #e67e22;
+}
+
+.list .delete-btn {
+    background-color: #e74c3c;
+}
+
+.list .delete-btn:hover {
+    background-color: #c0392b;
+}

@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="Apps/Camera/camera.css">
     <link rel="stylesheet" href="Apps/WeatherApp/weather.css">
     <link rel="stylesheet" href="Apps/Notepad/notepad.css">
+    <link rel="stylesheet" href="Apps/TodoApp/todolist.css">
 </head>
 
 <body>
@@ -31,211 +32,243 @@
         <div class="desktop">
             <div class="desktop-icons">
                 <div class="iconContainer">
-                    <div id="desktopIcon">
-                        <img src="images/Windows 11 Icons Theme/Windows Icons/Computer.ico" alt="">
-                    </div>
-                    <div id="desktopIconText">
-                        <p class="AppList-iconName">This PC</p>
+                    <div class="iconContainer">
+                        <div class="AppList-edgeIcon" id="mediaPlayer">
+                            <img src="images/MediaPlayer.png" alt="">
+                            <p class="AppList-iconName">Media player</p>
+                        </div>
                     </div>
                 </div>
                 <div class="iconContainer">
-                    <img src="images/Windows 11 Icons Theme/Windows Icons/Trash Empty.ico" alt="">
-                    <p class="AppList-iconName">Bin</p>
+                    <div class="iconContainer">
+                        <div class="AppList-edgeIcon">
+                            <img src="images/notepad.png" alt="" id="notepadOpenIcon">
+                            <p class="AppList-iconName">Notepad</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="iconContainer">
-                    <img src="images/edge-icon.png" alt="">
-                    <p class="AppList-iconName">Edge</p>
+                    <div class="iconContainer">
+                        <div class="AppList-edgeIcon" id="OpenCamera">
+                            <img src="images/Camera.ico" alt="">
+                            <p class="AppList-iconName">Camera</p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <!-- start menu -->
+                <div class="iconContainer">
+                    <div class="iconContainer">
+                        <div class="AppList-edgeIcon" id="whiteboardOpening">
+                            <img src="images/Whiteboard.ico" alt="">
+                            <p class="AppList-iconName">White board</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="iconContainer">
+                    <div class="iconContainer">
+                        <div class="AppList-edgeIcon">
+                            <img src="images/todo-icon.png" alt="" id="todoOpening">
+                            <p class="AppList-iconName">Todo App</p>
+                        </div>
+                    </div>
+                </div>
 
 
-            <div class="startWindow" id="startMenu">
-                <div class="startSearch">
-                    <i class="fa-solid fa-magnifying-glass" id="startSearch-icon"></i>
-                    <input type="text" placeholder="type here to search">
-                </div>
-                <div class="pinnedTitle">
-                    <div class="pinned">
-                        <span>Pinned</span>
+
+             
+                <!-- start menu -->
+
+
+                <div class="startWindow" id="startMenu">
+                    <div class="startSearch">
+                        <i class="fa-solid fa-magnifying-glass" id="startSearch-icon"></i>
+                        <input type="text" placeholder="type here to search">
                     </div>
-                    <div class="allApp">
-                        <button id="allAppBtn">All apps ></button>
+                    <div class="pinnedTitle">
+                        <div class="pinned">
+                            <span>Pinned</span>
+                        </div>
+                        <div class="allApp">
+                            <button id="allAppBtn">All apps ></button>
+                        </div>
                     </div>
-                </div>
-                <div class="AppList">
-                    <div class="AppList-edgeIcon">
-                        <img src="images/edge-icon.png" alt="img">
-                        <p class="AppList-iconName">Edge</p>
-                    </div>
-                    <div class="AppList-edgeIcon">
-                        <div><img src="images/word-icon.png" alt="">
-                            <p class="AppList-iconName">Word</p>
+                    <div class="AppList">
+                        <div class="AppList-edgeIcon">
+                            <img src="images/edge-icon.png" alt="img">
+                            <p class="AppList-iconName">Edge</p>
+                        </div>
+                        <div class="AppList-edgeIcon">
+                            <div><img src="images/word-icon.png" alt="">
+                                <p class="AppList-iconName">Word</p>
+                            </div>
+
+                        </div>
+                        <div class="AppList-edgeIcon">
+                            <img src="images/excel-icon.png" alt="">
+                            <p class="AppList-iconName">Excel</p>
+                        </div>
+
+                        <div class="AppList-edgeIcon">
+                            <img src="images/powerpoint-icon.png" alt="">
+                            <p class="AppList-iconName">Powerpoint</p>
+                        </div>
+                        <div class="AppList-edgeIcon">
+                            <img src="images/Paint-3D.ico" alt="">
+                            <p class="AppList-iconName">Paint 3D</p>
+                        </div>
+                        <div class="AppList-edgeIcon" id="whiteboardOpening">
+                            <img src="images/Whiteboard.ico" alt="">
+                            <p class="AppList-iconName">White board</p>
+                        </div>
+                        <div class="AppList-edgeIcon">
+                            <img src="images/notepad.png" alt="" id="notepadOpenIcon">
+                            <p class="AppList-iconName">Notepad</p>
+                        </div>
+                        <div class="AppList-edgeIcon">
+                            <img src="images/ms-office.ico" alt="">
+                            <p class="AppList-iconName">Office</p>
+                        </div>
+                        <div class="AppList-edgeIcon">
+                            <img src="images/ms-store-icon.png" alt="">
+                            <p class="AppList-iconName">Store</p>
+                        </div>
+                        <div class="AppList-edgeIcon">
+                            <img src="images/todo-icon.png" alt="" id="todoOpening">
+                            <p class="AppList-iconName">Todo App</p>
+                        </div>
+                        <div class="AppList-edgeIcon">
+                            <img src="images/PowerShell-icon.png" alt="">
+                            <p class="AppList-iconName">PowerShell</p>
+                        </div>
+                        <div class="AppList-edgeIcon">
+                            <img src="images/vs-code.ico" alt="">
+                            <p class="AppList-iconName">visual stdio code</p>
+                        </div>
+                        <div class="AppList-edgeIcon">
+                            <img src="images/terminal-icon.png" alt="">
+                            <p class="AppList-iconName">Terminal</p>
+                        </div>
+                        <div class="AppList-edgeIcon" id="mediaPlayer">
+                            <img src="images/MediaPlayer.png" alt="">
+                            <p class="AppList-iconName">Media player</p>
+                        </div>
+                        <div class="AppList-edgeIcon">
+                            <img src="images/outlook-icon.png" alt="">
+                            <p class="AppList-iconName">Outlook</p>
+                        </div>
+                        <div class="AppList-edgeIcon">
+                            <img src="images/ms-foto-icon.ico" alt="">
+                            <p class="AppList-iconName">Photos</p>
+                        </div>
+                        <div class="AppList-edgeIcon">
+                            <img src="images/calendar-icon.png" alt="">
+                            <p class="AppList-iconName">Calender</p>
+                        </div>
+                        <div class="AppList-edgeIcon" id="OpenCamera">
+                            <img src="images/Camera.ico" alt="">
+                            <p class="AppList-iconName">Camera</p>
                         </div>
 
                     </div>
-                    <div class="AppList-edgeIcon">
-                        <img src="images/excel-icon.png" alt="">
-                        <p class="AppList-iconName">Excel</p>
+                    <div class="recommendedTitle">
+                        <div class="recommendedText">
+                            <p>Recommended</p>
+                        </div>
+
+                        <div class="recommendedBtn"><button> More ></button></div>
+
                     </div>
 
-                    <div class="AppList-edgeIcon">
-                        <img src="images/powerpoint-icon.png" alt="">
-                        <p class="AppList-iconName">Powerpoint</p>
+                    <div class="recommendedList">
+
+                        <div class="recommendedListIcon">
+                            <img src="images/Windows 11 Icons Theme/Windows Icons/Yellow-Folder.ico" alt="">
+                            <p class="recommended-iconName">Outlook download</p>
+
+                        </div>
+
+                        <div class="recommendedListIcon">
+                            <img src="images/Windows 11 Icons Theme/Windows Icons/Yellow-Folder.ico" alt="">
+                            <p class="recommended-iconName">Windows 11 file</p>
+                        </div>
                     </div>
-                    <div class="AppList-edgeIcon">
-                        <img src="images/Paint-3D.ico" alt="">
-                        <p class="AppList-iconName">Paint 3D</p>
-                    </div>
-                    <div class="AppList-edgeIcon" id="whiteboardOpening">
-                        <img src="images/Whiteboard.ico" alt="">
-                        <p class="AppList-iconName">White board</p>
-                    </div>
-                    <div class="AppList-edgeIcon">
-                        <img src="images/notepad.png" alt="" id="notepadOpenIcon">
-                        <p class="AppList-iconName">Notepad</p>
-                    </div>
-                    <div class="AppList-edgeIcon">
-                        <img src="images/ms-office.ico" alt="">
-                        <p class="AppList-iconName">Office</p>
-                    </div>
-                    <div class="AppList-edgeIcon">
-                        <img src="images/ms-store-icon.png" alt="">
-                        <p class="AppList-iconName">Store</p>
-                    </div>
-                    <div class="AppList-edgeIcon">
-                        <img src="images/todo-icon.png" alt="">
-                        <p class="AppList-iconName">Todo App</p>
-                    </div>
-                    <div class="AppList-edgeIcon">
-                        <img src="images/PowerShell-icon.png" alt="">
-                        <p class="AppList-iconName">PowerShell</p>
-                    </div>
-                    <div class="AppList-edgeIcon">
-                        <img src="images/vs-code.ico" alt="">
-                        <p class="AppList-iconName">visual stdio code</p>
-                    </div>
-                    <div class="AppList-edgeIcon">
-                        <img src="images/terminal-icon.png" alt="">
-                        <p class="AppList-iconName">Terminal</p>
-                    </div>
-                    <div class="AppList-edgeIcon" id="mediaPlayer">
-                        <img src="images/MediaPlayer.png" alt="">
-                        <p class="AppList-iconName">Media player</p>
-                    </div>
-                    <div class="AppList-edgeIcon">
-                        <img src="images/outlook-icon.png" alt="">
-                        <p class="AppList-iconName">Outlook</p>
-                    </div>
-                    <div class="AppList-edgeIcon">
-                        <img src="images/ms-foto-icon.ico" alt="">
-                        <p class="AppList-iconName">Photos</p>
-                    </div>
-                    <div class="AppList-edgeIcon">
-                        <img src="images/calendar-icon.png" alt="">
-                        <p class="AppList-iconName">Calender</p>
-                    </div>
-                    <div class="AppList-edgeIcon" id="OpenCamera">
-                        <img src="images/Camera.ico" alt="">
-                        <p class="AppList-iconName">Camera</p>
+                    <div class="startControl">
+                        <div class="profilePhoto">
+                            <img src="images/profile.jpeg" alt="">
+                            <p id="profileName">Pritam</p>
+                        </div>
+
+                        <div class="onoff">
+                            <i class="fa-solid fa-power-off"></i>
+                        </div>
                     </div>
 
                 </div>
-                <div class="recommendedTitle">
-                    <div class="recommendedText">
-                        <p>Recommended</p>
-                    </div>
 
-                    <div class="recommendedBtn"><button> More ></button></div>
+
+
+                <!-- navigation Menu -->
+                <div class="navigationMenu">
+                    <div class="navigationMenu-iconList">
+                        <div class="navigationMenu-icon" id="wifiIcon">
+                            <div class="wifi">
+                                <i class="fa-solid fa-wifi"></i>
+                            </div>
+                            <div class="rightArrow">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </div>
+                        </div>
+                        <div class="navigationMenu-icon" id="bluetooth">
+                            <div class="bluetooth">
+                                <i class="fa-brands fa-bluetooth-b"></i>
+                            </div>
+                            <div class="rightArrow" id="">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </div>
+                        </div>
+                        <div class="navigationMenu-icon">
+                            <i class="fa-solid fa-plane" id="airplane"></i>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!-- widgets -->
+                <div class="widgetsBtn">
 
                 </div>
 
-                <div class="recommendedList">
 
-                    <div class="recommendedListIcon">
-                        <img src="images/Windows 11 Icons Theme/Windows Icons/Yellow-Folder.ico" alt="">
-                        <p class="recommended-iconName">Outlook download</p>
 
-                    </div>
+                <!-- VLC -->
 
-                    <div class="recommendedListIcon">
-                        <img src="images/Windows 11 Icons Theme/Windows Icons/Yellow-Folder.ico" alt="">
-                        <p class="recommended-iconName">Windows 11 file</p>
-                    </div>
+                <div class="vlcApp">
+
                 </div>
-                <div class="startControl">
-                    <div class="profilePhoto">
-                        <img src="images/profile.jpeg" alt="">
-                        <p id="profileName">Pritam</p>
-                    </div>
+
+
+                <!-- Camera -->
+
+                <div class="cameraApp" id="cameraApp">
+
+                </div>
+
+                <!-- notepad -->
+                <div class="notepadApp">
+
+                </div>
+                <!-- whiteborad -->
+
+                <div class="whiteboradApp">
+
+                </div>
+
+                <!-- Todolist App -->
+                <div class="todoApp">
                     
-                    <div class="onoff">
-                        <i class="fa-solid fa-power-off"></i>
-                    </div>
-                </div>
-
-            </div>
-
-
-
-            <!-- navigation Menu -->
-            <div class="navigationMenu">
-                <div class="navigationMenu-iconList">
-                    <div class="navigationMenu-icon" id="wifiIcon">
-                        <div class="wifi">
-                            <i class="fa-solid fa-wifi"></i>
-                        </div>
-                        <div class="rightArrow">
-                            <i class="fa-solid fa-chevron-right"></i>
-                        </div>
-                    </div>
-                    <div class="navigationMenu-icon" id="bluetooth">
-                        <div class="bluetooth">
-                            <i class="fa-brands fa-bluetooth-b"></i>
-                        </div>
-                        <div class="rightArrow" id="">
-                            <i class="fa-solid fa-chevron-right"></i>
-                        </div>
-                    </div>
-                    <div class="navigationMenu-icon">
-                        <i class="fa-solid fa-plane" id="airplane"></i>
-                    </div>
                 </div>
             </div>
-
-
-
-            <!-- widgets -->
-            <div class="widgetsBtn">
-
-            </div>
-
-
-
-            <!-- VLC -->
-
-            <div class="vlcApp">
-
-            </div>
-
-
-            <!-- Camera -->
-
-            <div class="cameraApp" id="cameraApp">
-
-            </div>
-
-            <!-- notepad -->
-            <div class="notepadApp">
-
-            </div>
-            <!-- whiteborad -->
-
-            <div class="whiteboradApp">
-
-            </div>
-
-        </div>
 
     </main>
     <footer>
@@ -272,9 +305,7 @@
                     </div>
                 </div>
                 <div class="ftrTaskbar-icons ftrIcon">
-                    <div class="fileExplorer">
-                        <img src="images/Explorer.ico" alt="">
-                    </div>
+                    
                 </div>
                 <div class="ftrTaskbar-icons ftrIcon">
                     <img src="images/Settings.ico" alt="">
@@ -316,6 +347,7 @@
 <script src="Apps/media player/vlc.js"></script>
 <script src="Apps/Camera/camera.js"></script>
 <script src="Apps/Notepad/notepad.js"></script>
+<script src="Apps/TodoApp/todolist.js"></script>
 <script src="Apps/WeatherApp/weather.js"></script>
 <script src="https://kit.fontawesome.com/ac015ecc5b.js" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/webcam-easy@1.1.1/dist/webcam-easy.min.js"></script>

@@ -12,6 +12,7 @@ const showHiddenIcon = document.querySelector('.showHiddenIcon');
 const widgets = document.querySelector('#widgets');
 const soundProfile = document.getElementById('soundProfile');
 const soundIcon = document.getElementById('soundIcon');
+const todoOpening = document.querySelector('#todoOpening');
 
 
 // const cameraWindowOpening = document.querySelector('.cameraWindow');
@@ -174,7 +175,13 @@ widgetsWindow.addEventListener('click', (e) => {
     e.stopPropagation();
 });
 
+desktop.addEventListener('click', hideWid  = () => {
+    hideWidgetsHandler();
+})
 
+const todoOpeningHandler = () => {
+    todoApp.style.display = 'block'
+}
 
 // Event Listeners
 startBtn.addEventListener('click', startHandler);
@@ -184,3 +191,4 @@ notepadOpenIcon.addEventListener('click', notepadOpenIconHandler);
 showHiddenIcon.addEventListener('click', showHiddenIconHandler);
 widgets.addEventListener('click', widgetsHandler);
 widgetsBtn.addEventListener('click', widgetsHandler);
+todoOpening.addEventListener('click', todoOpeningHandler);
