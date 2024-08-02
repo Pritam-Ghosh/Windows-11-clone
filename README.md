@@ -53,6 +53,12 @@ A Windows 11 clone built using HTML, CSS, and JavaScript, designed to mimic the 
 
 The project uses a weather API to fetch and display real-time weather data. Ensure you have the necessary API keys and permissions if you wish to extend or modify this feature.
 
+## Best Viewing Experience
+
+For the best viewing experience, please use a zoom level between 90% and 100% in your web browser. This ensures that all elements are displayed as intended and provides the most accurate representation of the Windows 11 interface.
+
+
+
 ## Project Demo
 
 ![Desktop View](images/Demo%20Video/projectSnap.jpg)
